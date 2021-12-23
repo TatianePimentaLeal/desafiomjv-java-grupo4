@@ -78,7 +78,7 @@ Alguns aplicativos podem precisar usar a java.text.Format classe mais antiga par
 
 ### Formatadores Predefinidos  
    <div style="display: inline_block"><br/>
-<img  align="center" alt="" src="https://i.imgur.com/phWcDAg.jpeg"/>
+<img  align="center" alt="" src="https://i.imgur.com/9KoMjNE.png"/>
 </div><br/>
    
   * **_Padrões para formatação e análise_**
