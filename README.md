@@ -2,10 +2,23 @@
 <div style="display: inline_block">
 Segundo exercício em grupo do <img  align="center" alt="html5" src="https://img.shields.io/static/v1?label=DevSchool&message=MJV&color=blueviolet"/>  <a href="https://www.java.com" target="_blank"> 
   
-  #### Autores
+  #### Autores (em ordem alfabética)
+- [Evelyn Carolina ](https://github.com/evelyncarolina)
+- [Dominic Lourenço Barbosa ](https://github.com/DomBarbosa8)
+- [Joana Silva ](https://github.com/Joana-Silvas)
+- [Lucca Bugatti ](https://github.com/luccabugatti)
+- [Mayara Saavedra ](https://github.com/maysaavedra)
+- [Patricia Ferreira de Sousa ](https://github.com/paty127)
+- [Tatiane Pimenta Leal ](https://github.com/TatianePimentaLeal)
 - [Wagner dos Santos ](https://github.com/wbatista985)
 
-//falta os outros participantes a serem adicionados
+ 
+## Requisitos
+1. Realizar uma breve descrição da classe em questão;
+2. Apresentar alternativas de instanciação de objetos com contrutor ou metódos singleton;
+3. Apresentar no mínimo 04 métodos mais utilizados destacando o seu contrato (tipo retorno + nome + parâmetros);
+4. Apresentar se alguns dos métodos é sobrecarregado;
+5. Realizar uma demonstração adaptando o uso dos métodos (mínimo 04) em situações do cotidiando (use a imaginação);
   
  ## Descrição Classes Java.
   
