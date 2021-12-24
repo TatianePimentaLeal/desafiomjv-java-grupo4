@@ -2,7 +2,7 @@
 <div style="display: inline_block">
 Segundo exercício em grupo do <img  align="center" alt="html5" src="https://img.shields.io/static/v1?label=DevSchool&message=MJV&color=blueviolet"/>  <a href="https://www.java.com" target="_blank"> 
   
-  #### Autores (em ordem alfabética)
+  #### Autores 
 - [Evelyn Carolina ](https://github.com/evelyncarolina)
 - [Dominic Lourenço Barbosa ](https://github.com/DomBarbosa8)
 - [Joana Silva ](https://github.com/Joana-Silvas)
@@ -15,7 +15,7 @@ Segundo exercício em grupo do <img  align="center" alt="html5" src="https://img
  
 ## Requisitos
 1. Realizar uma breve descrição da classe em questão;
-2. Apresentar alternativas de instanciação de objetos com contrutor ou metódos singleton;
+2. Apresentar alternativas de instanciação de objetos com construtor ou metódos singleton;
 3. Apresentar no mínimo 04 métodos mais utilizados destacando o seu contrato (tipo retorno + nome + parâmetros);
 4. Apresentar se alguns dos métodos é sobrecarregado;
 5. Realizar uma demonstração adaptando o uso dos métodos (mínimo 04) em situações do cotidiando (use a imaginação);
@@ -58,6 +58,8 @@ A impressão formatada para a linguagem Java é fortemente inspirada em C's prin
    
    
    ````
+  Veja mais sobre a documentação da Classe java (java.util.Formatter) no próprio site da Oracle, pelo link:
+   https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html
    
    ## java.time.format.DateTimeFormatter
    
@@ -106,7 +108,57 @@ Por exemplo:
   LocalDate parsedDate = LocalDate.parse (texto, formatador);
    
 ```
+  Veja mais sobre a documentação da Classe java (java.time.format.DateTimeFormatter) no próprio site da Oracle, pelo link:
+  https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html
 
    ## java.text.DecimalFormat
+  
+  A classe DecimalFormat também faz parte do pacote java.text e permite formatar números reais, porém uma particularidade é que ela permite que seja informado o a forma a ser formatado o valor. Você pode usar a classe DecimalFormat para formatar números decimais em seqüências específicas para a localidade. Esta classe permite-lhe controlar a exibição da esquerda e à quantidade de zeros à direita, prefixos e sufixos, agrupando (milhares) separadores, e o separador decimal. Se você quer mudar símbolos de formatação, tais como separador decimal, você pode usar os DecimalFormatSymbols em conjunto com a classe DecimalFormat. Essas classes oferecem uma grande flexibilidade na formatação de números, mas eles podem fazer seu código mais complexo.
 
+Você especifica as propriedades de formatação de DecimalFormat com uma cadeia de caracteres padrão. O padrão determina o que o número formatado parece.
+
+Para entender como formatar, analise os caracteres e descrições dos simbolos:
+  
+  - (0) Um dígito, caso não esteja presente adiciona 0
+  - (#) Um dígito, de zero mostra como ausente
+  - (.) Espaço reservado para separador decimal
+  - (,) Espaço reservado para o agrupamento separador
+  
+Estes são os símbolos mais utilizados. 
+Existem outros símbolos que não estão na lista mas podem ser entendidos no próprio site da oracle, pelo link:              https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html
+
+Para criar o mesmo exemplo mostrado com NumberFormat, observe o código a seguir:
+  
+  ```
+  import java.text.DecimalFormat;
+
+  String valorFormatado = new DecimalFormat("#,##0.00").format(12005.11);
+  System.out.println( valorFormatado );
+  
+  ```
+  A saída será: 12.005,11
+  
+  Entendemos que a classe DecimalFormat permite formatar valores em diferentes padrões, dessa forma existe uma maior liberdade. 
+  O exemplo mostrado, cria um objeto DecimalFormat para a localidade padrão.
+  Se você quer um objeto DecimalFormat para outro local, precisa instanciar um NumberFormat e depois lançá-lo para DecimalFormat.
+  Aqui está um exemplo:
+  
+  ```
+  NumberFormat nf = NumberFormat.getNumberInstance(loc);
+  DecimalFormat df = (DecimalFormat)nf;
+  df.applyPattern(pattern);
+  String output = df.format(value);
+  System.out.println(pattern + " " + output + " " + loc.toString());
+  
+  ```
+  
+  O resultado pode mostrar variação de acordo com a localidade, ou seja para cada localidade pode ter diferentes saídas:
+  
+      - ##,###.###  = 123,456.789 en_US
+      - ###,###.### = 123.456,789 de_DE
+      - ###,###.### = 123 456,789 fr_FR
+
+ Veja mais sobre a documentação da Classe java (java.text.DecimalFormat) no próprio site da Oracle, pelo link:
+  https://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html
+  
 
