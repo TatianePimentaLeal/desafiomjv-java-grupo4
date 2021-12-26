@@ -3,6 +3,7 @@ package carrental;
 import java.util.Set;
 
 import carrental.model.Cliente;
+import carrental.model.Pedido;
 import carrental.model.Produto;
 import carrental.repository.ClienteRepository;
 import carrental.repository.ProdutoRepository;
@@ -25,19 +26,28 @@ public class CarrentalApp {
 		Set<Produto> produtos = repositoryP.getProduto();
 		
 		
-		ClienteService service = new ClienteService();		
+		ClienteService service = new ClienteService();
 		Joana.setDataNascimento(service.formatarData(Joana.getDataNascimento()));		
 		Joana.setCpf(service.formatarCPF(Joana.getCpf()));		
 		
 		
 		ProdutoService serviceP = new ProdutoService();
-		Carro.setPlaca(serviceP.formatarPlaca(Carro.getPlaca()));
-		
+		Carro.setPlaca(serviceP.formatarPlaca(Carro.getPlaca()));		
 		
 		System.out.println(clientes);
 		System.out.println(produtos);
 		
+		Pedido pedido = new Pedido(1,"11/01/2021" , 5, Joana, Carro);
+		System.out.println(pedido);
+		
 		
 	}
+	
+	
+	
+	
+		
+		
+	
 
 }

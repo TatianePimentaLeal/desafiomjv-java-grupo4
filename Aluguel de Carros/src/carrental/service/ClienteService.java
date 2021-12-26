@@ -4,11 +4,11 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 
-import carrental.model.Cliente;
+
 
 public class ClienteService {
 	
-	
+	//Rever
 	public String formatarData(String dataNascimento) {
 		DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy"); 
 		LocalDate data = LocalDate.parse(dataNascimento, formato);
@@ -20,7 +20,7 @@ public class ClienteService {
 		return(cpf.substring(0, 3) + "." + cpf.substring(3, 6) + "." +
 				cpf.substring(6, 9) + "-" + cpf.substring(9, 11));
 	}
-
+	
 	
 	public void alterarCliente() {
 		
