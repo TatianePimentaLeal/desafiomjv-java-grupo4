@@ -1,5 +1,7 @@
 package carrental;
 
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.Set;
 
 import carrental.model.Cliente;
@@ -19,7 +21,7 @@ public class CarrentalApp {
 		
 		ProdutoRepository repositoryP = new ProdutoRepository();
 		Produto Carro = new Produto("Renault Sandeiro", "oqz1917", "Cinza chumbo", 50.00);
-		repositoryP.criarPedido(Carro);
+		repositoryP.criarProduto(Carro);
 		
 		
 		Set<Cliente> clientes = repository.getClientes();
@@ -27,7 +29,9 @@ public class CarrentalApp {
 		
 		
 		ClienteService service = new ClienteService();
-		Joana.setDataNascimento(service.formatarData(Joana.getDataNascimento()));		
+		
+		Joana.setDataNascimento(service.formatarData(Joana.getDataNascimento()));
+		
 		Joana.setCpf(service.formatarCPF(Joana.getCpf()));		
 		
 		
@@ -37,7 +41,10 @@ public class CarrentalApp {
 		System.out.println(clientes);
 		System.out.println(produtos);
 		
-		Pedido pedido = new Pedido(1,"11/01/2021" , 5, Joana, Carro);
+		
+		Date a = Date.valueOf(LocalDate.now());
+		
+		Pedido pedido = new Pedido(1, a , 5, Joana, Carro);
 		System.out.println(pedido);
 		
 		

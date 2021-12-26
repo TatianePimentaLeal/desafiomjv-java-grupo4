@@ -1,17 +1,19 @@
 package carrental.model;
 
-
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
 
 public class Pedido {
 	
 	private int numeroPedido;
-	private String dataPedido;	
+	private Date dataPedido;	
 	private int qtdDias;
 	private Cliente cliente;
 	private Produto produto;
 	
 	
-	public Pedido(int numeroPedido, String dataPedido, int qtdDias, Cliente cliente, Produto produto) {
+	public Pedido(int numeroPedido, Date dataPedido, int qtdDias, Cliente cliente, Produto produto) {
 		
 		this.numeroPedido = numeroPedido;
 		this.dataPedido = dataPedido;
@@ -25,12 +27,10 @@ public class Pedido {
 	public void setNumeroPedido(int numeroPedido) {
 		this.numeroPedido = numeroPedido;
 	}
-	public String getDataPedido() {
+	public Date getDataPedido() {
 		return dataPedido;
 	}
-	public void setDataPedido(String dataPedido) {
-		this.dataPedido = dataPedido;
-	}
+	
 	public int getQtdDias() {
 		return qtdDias;
 	}
@@ -53,7 +53,8 @@ public class Pedido {
 	
 	@Override
 	public String toString() {
-		return "Pedido [numeroPedido=" + numeroPedido + ", dataPedido=" + dataPedido + ", qtdDias=" + qtdDias
+		SimpleDateFormat formatarData = new SimpleDateFormat("dd/MM/yyyy");
+		return "Pedido [numeroPedido=" + numeroPedido + ", dataPedido=" + formatarData.format(dataPedido)+ ", qtdDias=" + qtdDias
 				+ ", cliente=" + cliente + ", produto=" + produto + "]";
 	}
 	

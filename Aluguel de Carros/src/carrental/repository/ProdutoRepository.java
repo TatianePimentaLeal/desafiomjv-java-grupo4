@@ -12,7 +12,7 @@ public class ProdutoRepository {
 		return produtos;
 	}
 	
-	public void criarPedido(Produto produto) {	
+	public void criarProduto(Produto produto) {	
 		produtos.add(produto);		
 		
 	}

@@ -41,8 +41,8 @@ public class Produto {
 
 	@Override
 	public String toString() {
-		return "Produto [nomeVeiculo=" + nomeVeiculo + ", placa=" + placa + ", descricao=" + descricao
-				+ ", valorAluguel=" + valorAluguel + "]";
+		return String.format("Produto [nomeVeiculo=" + nomeVeiculo + ", placa=" + placa + ", descricao=" + descricao
+				+ ", valorAluguel=" + "%.2f" +  "]", valorAluguel);
 	}
 	
 	
