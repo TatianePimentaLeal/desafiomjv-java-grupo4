@@ -2,7 +2,7 @@ package carrental.service;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
+
 
 import carrental.model.Cliente;
 
@@ -17,8 +17,8 @@ public class ClienteService {
 	}
 	public String formatarCPF(String cpf) {		
 		
-		cpf = String.format("xxx.xxx.xxx-xx", cpf);
-		return cpf;
+		return(cpf.substring(0, 3) + "." + cpf.substring(3, 6) + "." +
+				cpf.substring(6, 9) + "-" + cpf.substring(9, 11));
 	}
 
 	
