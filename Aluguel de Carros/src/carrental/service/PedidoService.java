@@ -2,7 +2,7 @@ package carrental.service;
 
 public class PedidoService {
 	
-	public void criarPedido() {
+	public void CriarPedido() {
 		
 	}
 	public void FecharPedido() {
