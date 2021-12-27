@@ -1,3 +1,0 @@
-Dados do Cliente: [Cliente [nome=Joana, email=Joana@gmail.com, senha=123456, endereco=Rua:ABS, 123, dataNascimento=10/10/1985, cpf=000.000.000-00]]
-Dados do produto: Pedido [numeroPedido=1, dataPedido=27/12/2021, qtdDias=5, cliente=Cliente [nome=Joana, email=Joana@gmail.com, senha=123456, endereco=Rua:ABS, 123, dataNascimento=10/10/1985, cpf=000.000.000-00], produto=Produto [nomeVeiculo=Renault Sandeiro, placa=OQZ-1917, descricao=Cinza chumbo, valorAluguel=50,00]]
-Dados do Aluguel: [Produto [nomeVeiculo=Renault Sandeiro, placa=OQZ-1917, descricao=Cinza chumbo, valorAluguel=50,00]]

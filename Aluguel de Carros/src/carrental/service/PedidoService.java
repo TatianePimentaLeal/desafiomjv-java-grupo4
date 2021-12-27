@@ -7,7 +7,7 @@ public class PedidoService {
 	
 	
 
-	public static Date devolucao(Date dataPedido, int qntDias){
+	public Date devolucao(Date dataPedido, int qntDias){
         Calendar cal = Calendar.getInstance();
         cal.setTime(dataPedido);
         cal.add(Calendar.DAY_OF_MONTH, qntDias);

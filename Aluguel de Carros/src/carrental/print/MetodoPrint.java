@@ -17,7 +17,7 @@ public class MetodoPrint {
     {
         try
         {
-            arquivo = new Formatter("ProgramacaoProgressiva.txt");
+            arquivo = new Formatter("Registro de Dados do Pedido.txt");
         }
         catch( SecurityException semPermissao) 
         {
@@ -35,7 +35,9 @@ public class MetodoPrint {
     {
         try
         {
-            arquivo.format("Dados do Cliente: " + clientes +"\nDados do produto: "+ pedido + "\nDados do Aluguel: " + produtos);
+            arquivo.format("Dados do Cliente: " + clientes 
+            		+"\nDados do Produto: "+ produtos 
+            		+ "\nDados do Aluguel: " + pedido);
             System.out.println("Impressão em arquivo realizada com sucesso");
         }
         catch(FormatterClosedException formatoDesconhecido)

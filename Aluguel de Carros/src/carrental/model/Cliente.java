@@ -56,8 +56,12 @@ public class Cliente {
 	
 	@Override
 	public String toString() {		
-		return "Cliente [nome=" + nome + ", email=" + email + ", senha=" + senha + ", endereco=" + endereco
-				+ ", dataNascimento=" + dataNascimento + ", cpf=" + cpf + "]";
+		return ("Cliente "
+				+ "\nNome: " + nome
+				+ "\nEmail: " + email 
+				+ "\nEndereco: " + endereco
+				+ "\nData Nascimento: " + dataNascimento 
+				+ "\nCPF: " + cpf);
 	}
 	
 	

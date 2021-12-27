@@ -1,0 +1,30 @@
+Dados do Cliente: [Cliente 
+Nome: Joana
+Email: Joana@gmail.com
+Endereco: Rua:ABS, 123
+Data Nascimento: 10/10/1985
+CPF: 000.000.000-00]
+Dados do Produto: [Detalhes do Produto 
+Nome Veiculo: Renault Sandeiro
+Placa: OQZ-1917
+Descricao: Cinza chumbo
+Quantidade de dias que ficará alugado: 5
+Valor do Aluguel: 50.0
+Valor do Total: 2.55]
+Dados do Aluguel: Pedido Nº: 1
+Data do Pedido:  27/12/2021
+Quantidade de Dias:5
+Cliente:Cliente 
+Nome: Joana
+Email: Joana@gmail.com
+Endereco: Rua:ABS, 123
+Data Nascimento: 10/10/1985
+CPF: 000.000.000-00
+Carro:Detalhes do Produto 
+Nome Veiculo: Renault Sandeiro
+Placa: OQZ-1917
+Descricao: Cinza chumbo
+Quantidade de dias que ficará alugado: 5
+Valor do Aluguel: 50.0
+Valor do Total: 2.55
+Data Devolução:Sat Jan 01 00:00:00 BRT 2022

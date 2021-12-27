@@ -15,6 +15,7 @@ import carrental.print.MetodoPrint;
 import carrental.repository.ClienteRepository;
 import carrental.repository.ProdutoRepository;
 import carrental.service.ClienteService;
+import carrental.service.PedidoService;
 import carrental.service.ProdutoService;
 
 public class CarrentalApp {
@@ -28,7 +29,7 @@ public class CarrentalApp {
 		repository.cadastrarCliente(Joana);
 		
 		ProdutoRepository repositoryP = new ProdutoRepository();
-		Produto Carro = new Produto("Renault Sandeiro", "oqz1917", "Cinza chumbo", 50.00, 2.55);
+		Produto Carro = new Produto("Renault Sandeiro", "oqz1917", "Cinza chumbo", 5, 50.00, 2.55);
 		repositoryP.criarProduto(Carro);
 		
 		
@@ -53,59 +54,47 @@ public class CarrentalApp {
 		
 		Date d = Date.valueOf(LocalDate.now());
 		
-		Pedido pedido = new Pedido(1, d , 5, Joana, Carro);
+		Date x =null;
+		
+		
+		Pedido pedido = new Pedido(1, d , 5, x ,Joana, Carro);
+		
+		PedidoService servicePedido = new PedidoService();
+		pedido.setDataDevolucao(servicePedido.devolucao(d, Carro.getQtdDias()));
+		
+		
 		System.out.println(pedido);	
 		
-<<<<<<< HEAD
-		//Eve
-		double aluguel = 120.0;
-		DecimalFormat valorDecimal = new DecimalFormat();
-		System.out.println(valorDecimal.format(aluguel));
+
 		
-<<<<<<< HEAD
-		//Eve
-		double valorCarro = 1200.0;
-=======
-		//Usando esse formato, precisa confirar manualmente
+		
+
+		//----Eve--------
 		double aluguel = 120.0;
 		DecimalFormat valorDecimal = new DecimalFormat("R$ ##.00");
-		System.out.println(valorDecimal.format(aluguel));
+		System.out.println(valorDecimal.format(aluguel));	
+	
+
 		
-		//Usando esse formato, a configuração é feita automaticamente
-		double valorCarro = 130000.0;
->>>>>>> d3acca1e2342e3f9bceb69488cdc06a399663a56
-		Locale localBR = new Locale("pt","BR");
-		NumberFormat moedaBR = NumberFormat.getCurrencyInstance(localBR);
-		moedaBR.setMinimumFractionDigits(2);
-		moedaBR.setMaximumFractionDigits(2);
-		System.out.println(moedaBR.format(valorCarro));
-<<<<<<< HEAD
-=======
 		//----Eve-------- 
 		double valorCarro = 130000.0;
 		Locale localBR = new Locale("pt","BR");
 		NumberFormat moedaBR = NumberFormat.getCurrencyInstance(localBR);
 		System.out.println(moedaBR.format(valorCarro));
 		
-		NumberFormat formatoBR = NumberFormat.getNumberInstance(localBR);
-		formatoBR.setMinimumFractionDigits(2);
-		formatoBR.setMaximumFractionDigits(2);
-		System.out.println(formatoBR.format(valorCarro));
-=======
+//		NumberFormat formatoBR = NumberFormat.getNumberInstance(localBR);
+//		formatoBR.setMinimumFractionDigits(2);
+//		formatoBR.setMaximumFractionDigits(2);
+//		System.out.println(formatoBR.format(valorCarro));
+
 	
-		
->>>>>>> d3acca1e2342e3f9bceb69488cdc06a399663a56
-	}
+
 	
-	
-	
-	
->>>>>>> d8ba5d674fc7aeddb5dc3717846ca446b87fc8ee
-		
 		MetodoPrint teste = new MetodoPrint();
         teste.abrir();
         teste.escrever(clientes, produtos, pedido);
         teste.fechar();
+        
      
 	}		
 		
