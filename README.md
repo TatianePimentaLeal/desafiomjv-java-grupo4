@@ -167,5 +167,65 @@ Para criar o mesmo exemplo mostrado com NumberFormat, observe o código a seguir
 <img  align="center" alt="" src="https://i.imgur.com/OdPQoi5.png"/>
 </div><br/>
   
+## Preparação para uso, aplicação e demonstração das classes
+
+<img src="https://github.com/TatianePimentaLeal/desafiomjv-java-grupo4/blob/main/imagens/Diagrama1README.JPG" alt="Diagrama de classes inicial" width="700" height="400">
   
+<img src="https://github.com/TatianePimentaLeal/desafiomjv-java-grupo4/blob/main/imagens/Diagrama2README.JPG" alt="Diagrama de classes revisado e simplificado" width="700" height="400">
+
+
+## Métodos mais utilizados e seus destaques
+Como último ponto do desafio que tinha como foco “apresentar no mínimo 04 métodos mais utilizados destacando o seu contrato (tipo retorno + nome + parâmetros)”, nós verificamos e utilizamos:
+
+**.toUpperCase()**
+- Sintaxe: public String toUpperCase(Locale loc) / public String toUpperCase()
+- Método de classe string que converte todos os caracteres em letras maiúsculas.
+- Parâmetro: valor "locale" a ser aplicado enquanto converte todos os caracteres; 
+- Retorno: retorna letras maiúsculas.
+
+**.getInstance**
+- Sintaxe: public static Signature getInstance(String algorithm)
+- Usado para retornar a assinatura de um objeto que implementa a assinatura específica do algoritmo.
+- Parâmetro: este método pega o nome padrão do algoritmo como parâmetro;
+- Retorno: retorna a nova assinatura do objeto (new Signature object).
+
+**.setTime**
+- Sintaxe: public void setTime(long time)
+- Configura um date object, que aceita um único parâmetro que especifica o número em milissegundos.
+- Parâmetro: função aceita um único parâmetro de tempo (time) que especifica conforme acima;
+- Retorno: não tem valor de retorno.
+
+**.substring**
+- Sintaxe: public String substring​(int beginIndex, int endIndex)
+- Usado para extrair uma porção de string de uma string dada. Cria um novo objeto string sem alterar a original
+- Parâmetro: início e final do índice (beginIndex, endIndex), para efetuar a busca do inicio e do fim;
+- Retorno: um novo objeto string resultando da parte da string original cortada da base do índice (de acordo com begin e end)
+
+
+  
+## REFERÊNCIAS PRINCIPAIS
+
+BAELDUNG. Guide to DateTimeFormatter. Disponível em: https://www.baeldung.com/java-datetimeformatter. Acesso em: 23 dez. 2021.
+
+CRIO DO. 10 Important String Methods In Java You Must Know. Disponível em: https://www.crio.do/blog/string-methods-in-java/. Acesso em: 27 dez. 2021.
+
+DEVMEDIA. Formatando números com Numberformat. Disponível em: https://www.devmedia.com.br/formatando-numeros-com-numberformat/7369. Acesso em: 26 dez. 2021.
+
+DICAS DE JAVA. Java 8: Como formatar LocalDate e LocalDateTime. Disponível em: https://dicasdejava.com.br/java-8-como-formatar-localdate-e-localdatetime/. Acesso em: 23 dez. 2021.
+
+GEEKS FOR GEEKS. Java signature getInstance() method with examples. Disponível em: https://www.geeksforgeeks.org/java-signature-getinstance-method-with-examples/. Acesso em: 27 dez. 2021.
+
+GEEKS FOR GEEKS. Java string toUpperCase() method with examples. Disponível em: https://www.geeksforgeeks.org/java-string-touppercase-method-with-examples/. Acesso em: 27 dez. 2021.
+
+GEEKS FOR GEEKS. Date setTime() method in Java with examples. Disponível em: https://www.geeksforgeeks.org/date-settime-method-in-java-with-examples/. Acesso em: 27 dez. 2021. 
+
+JAVA T POINT. Java string format(). Disponível em: https://www.javatpoint.com/java-string-format. Acesso em: 26 dez. 2021.
+
+RECEITAS DE CÓDIGO. NumberFormat ou DecimalFormat, formatar números reais em Java. Disponível em: https://receitasdecodigo.com.br/java/numberformat-ou-decimalformat-formatar-numeros-reais-em-java. Acesso em 21 dez. 2021.
+
+ORACLE. Class DateTimeFormatter. Disponível em: https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html. Acesso em: 21 dez. 2021.
+
+ORACLE. Customizing formats. Disponível em: https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html. Acesso em: 21 dez. 2021.
+
+STACKOVERFLOW. Formatar double em Java. Disponível em: https://pt.stackoverflow.com/questions/55720/formatar-double-em-java. Acesso em: 26 dez. 2021.  
 
