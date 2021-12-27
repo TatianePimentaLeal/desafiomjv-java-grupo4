@@ -1,18 +1,15 @@
 package carrental.model;
 
-import java.util.Date;
-
-import carrental.service.ClienteService;
 
 public class Cliente {
 	private String nome;
 	private String email;
 	private String senha;
 	private String endereco;	
-	private Date dataNascimento;
+	private String dataNascimento;
 	private String cpf;
 	
-	public Cliente(String nome, String email, String senha, String endereco, Date dataNascimento, String cpf) {
+	public Cliente(String nome, String email, String senha, String endereco, String dataNascimento, String cpf) {
 		this.nome = nome;
 		this.email = email;
 		this.senha = senha;
@@ -44,10 +41,10 @@ public class Cliente {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	public Date getDataNascimento() {
+	public String getDataNascimento() {
 		return dataNascimento;
 	}
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 	public String getCpf() {
@@ -58,10 +55,9 @@ public class Cliente {
 	}	
 	
 	@Override
-	public String toString() {
-		ClienteService service = new ClienteService();
+	public String toString() {		
 		return "Cliente [nome=" + nome + ", email=" + email + ", senha=" + senha + ", endereco=" + endereco
-				+ ", dataNascimento=" + service.formatarData(dataNascimento) + ", cpf=" + cpf + "]";
+				+ ", dataNascimento=" + dataNascimento + ", cpf=" + cpf + "]";
 	}
 	
 	

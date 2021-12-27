@@ -1,5 +1,7 @@
 package carrental.service;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
@@ -7,14 +9,12 @@ import java.util.Date;
 
 public class ClienteService {
 	
-	//Rever
-	public String formatarData(Date data) {
-		Calendar cal = Calendar.getInstance();
-        cal.setTime(data);
+	
+	public Date formatarData(String dataNasciemnto) throws ParseException {
 
-        DateTimeFormatter formatado = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        String dataFormatada = formatado.format(LocalDate.of(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH)));
-
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+		
+		Date dataFormatada = formatter.parse(dataNasciemnto);
         return dataFormatada;
 	}
 
@@ -25,18 +25,7 @@ public class ClienteService {
 	}
 	
 	
-	public void alterarCliente() {
-		
-		
-	}
-	public void buscarCliente() {
-		
-	}
 	
-	
-	public void excluirCliente() {
-		
-	}
 	
 	
 }

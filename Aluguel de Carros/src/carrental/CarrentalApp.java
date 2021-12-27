@@ -7,6 +7,8 @@ import java.util.Set;
 import carrental.model.Cliente;
 import carrental.model.Pedido;
 import carrental.model.Produto;
+import carrental.print.EscreverMetodos;
+import carrental.print.MetodoPrint;
 import carrental.repository.ClienteRepository;
 import carrental.repository.ProdutoRepository;
 import carrental.service.ClienteService;
@@ -16,8 +18,10 @@ public class CarrentalApp {
 
 	public static void main(String[] args) {
 		ClienteRepository repository = new ClienteRepository();
-		Date data = new Date(1222, 12, 12);
-		Cliente Joana = new Cliente("Joana", "Joana@gmail.com", "123456", "Rua:ABS, 123",data, "00000000000");
+		
+		
+		
+		Cliente Joana = new Cliente("Joana", "Joana@gmail.com", "123456", "Rua:ABS, 123", "10/10/1985", "00000000000");
 		repository.cadastrarCliente(Joana);
 		
 		ProdutoRepository repositoryP = new ProdutoRepository();
@@ -31,8 +35,13 @@ public class CarrentalApp {
 		
 		ClienteService service = new ClienteService();
 
-		Date data2 = new Date(2000, 10, 10);
-		Joana.setDataNascimento(data2);
+		
+//		try {
+//			Joana.setDataNascimento(service.formatarData(Joana.getDataNascimento()));
+//		} catch (ParseException e) {
+//			
+//			e.printStackTrace();
+//		}
 		
 		Joana.setCpf(service.formatarCPF(Joana.getCpf()));		
 		
@@ -44,10 +53,16 @@ public class CarrentalApp {
 		System.out.println(produtos);
 		
 		
-		Date a = Date.valueOf(LocalDate.now());
+		Date d = Date.valueOf(LocalDate.now());
 		
-		Pedido pedido = new Pedido(1, a , 5, Joana, Carro);
+		Pedido pedido = new Pedido(1, d , 5, Joana, Carro);
 		System.out.println(pedido);	
+		
+		MetodoPrint teste = new MetodoPrint();
+        teste.abrir();
+        teste.escrever();
+        teste.fechar();
+     
 	}
 	
 	
