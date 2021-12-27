@@ -76,12 +76,13 @@ public class Pedido {
 	@Override
 	public String toString() {
 		SimpleDateFormat formatarData = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
 		return "Pedido Nº: " + numeroPedido 
 				+ "\nData do Pedido:  " + formatarData.format(dataPedido)
 				+ "\nQuantidade de Dias:" + qtdDias
 				+ "\nCliente:" + cliente 
 				+ "\nCarro:" + produto
-				+ "\nData Devolução:" + dataDevolucao;
+				+ "\nData Devolução:" + formatador.format(dataDevolucao);
 	}
 
 

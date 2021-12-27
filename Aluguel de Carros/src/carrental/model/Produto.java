@@ -1,5 +1,9 @@
 package carrental.model;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class Produto {
 	private String nomeVeiculo;
 	private String placa;
@@ -55,22 +59,28 @@ public class Produto {
 	public void setValorAluguel(double valorAluguel) {
 		this.valorAluguel = valorAluguel;
 	}
-	public double getValorCarro() {
+	public double getValorTotal() {
 		return valorTotal;
 	}
-	public void setValorCarro(double valorTotal) {
+	public void setValorTotal(double valorTotal) {
 		this.valorTotal = valorTotal;
 	}
 	
 	@Override
 	public String toString() {
+		DecimalFormat valorDecimal = new DecimalFormat("R$ ##.00");		
+		Locale localBR = new Locale("pt","BR");
+		NumberFormat moedaBR = NumberFormat.getCurrencyInstance(localBR);
+		
+		
+		
 		return String.format("Detalhes do Produto "
 				+ "\nNome Veiculo: " + nomeVeiculo 
 				+ "\nPlaca: " + placa 
 				+ "\nDescricao: " + descricao
 				+ "\nQuantidade de dias que ficará alugado: " + qtdDias
-				+ "\nValor do Aluguel: " +  valorAluguel
-				+ "\nValor do Total: " +  valorTotal);
+				+ "\nValor do Aluguel: " +  valorDecimal.format(valorAluguel)
+				+ "\nValor do Total: " +  moedaBR.format(valorTotal));
 				 
 	}
 	
