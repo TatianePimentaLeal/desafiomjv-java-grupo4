@@ -1,6 +1,7 @@
 package carrental;
 
 import java.sql.Date;
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -23,7 +24,6 @@ public class CarrentalApp {
 		ProdutoRepository repositoryP = new ProdutoRepository();
 		Produto Carro = new Produto("Renault Sandeiro", "oqz1917", "Cinza chumbo", 50.00);
 		repositoryP.criarProduto(Carro);
-		
 		
 		Set<Cliente> clientes = repository.getClientes();
 		Set<Produto> produtos = repositoryP.getProduto();
@@ -48,6 +48,11 @@ public class CarrentalApp {
 		
 		Pedido pedido = new Pedido(1, a , 5, Joana, Carro);
 		System.out.println(pedido);	
+		
+		//----EVE------
+		double aluguel = 120.0;
+		DecimalFormat valorDecimal = new DecimalFormat("##.00");
+		System.out.println(valorDecimal.format(aluguel));
 	}
 	
 	
