@@ -2,7 +2,9 @@ package carrental;
 
 import java.sql.Date;
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.time.LocalDate;
+import java.util.Locale;
 import java.util.Set;
 
 import carrental.model.Cliente;
@@ -54,6 +56,11 @@ public class CarrentalApp {
 		DecimalFormat valorDecimal = new DecimalFormat("##.00");
 		System.out.println(valorDecimal.format(aluguel));
 		
+		//----Eve-------- 
+		double valorCarro = 1200.0;
+		Locale localBR = new Locale("pt","BR");
+		NumberFormat moedaBR = NumberFormat.getCurrencyInstance(localBR);
+		System.out.println(moedaBR.format(valorCarro));
 	}
 	
 	
