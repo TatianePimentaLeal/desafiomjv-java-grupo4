@@ -9,16 +9,15 @@ public class Cliente {
 	private String email;
 	private String senha;
 	private String endereco;	
-	private String dataNascimento;
+	private Date dataNascimento;
 	private String cpf;
 	
 	public Cliente(String nome, String email, String senha, String endereco, Date dataNascimento, String cpf) {
-		ClienteService service = new ClienteService();
 		this.nome = nome;
 		this.email = email;
 		this.senha = senha;
 		this.endereco = endereco;
-		this.dataNascimento = service.formatarData(dataNascimento);
+		this.dataNascimento = dataNascimento;
 		this.cpf = cpf;
 	}
 	public String getNome() {
@@ -45,25 +44,24 @@ public class Cliente {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	public String getDataNascimento() {
+	public Date getDataNascimento() {
 		return dataNascimento;
 	}
 	public void setDataNascimento(Date dataNascimento) {
-		ClienteService service = new ClienteService();
-		this.dataNascimento =service.formatarData(dataNascimento);
+		this.dataNascimento = dataNascimento;
 	}
 	public String getCpf() {
 		return cpf;
 	}
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
-	}
-	
+	}	
 	
 	@Override
 	public String toString() {
+		ClienteService service = new ClienteService();
 		return "Cliente [nome=" + nome + ", email=" + email + ", senha=" + senha + ", endereco=" + endereco
-				+ ", dataNascimento=" + dataNascimento + ", cpf=" + cpf + "]";
+				+ ", dataNascimento=" + service.formatarData(dataNascimento) + ", cpf=" + cpf + "]";
 	}
 	
 	

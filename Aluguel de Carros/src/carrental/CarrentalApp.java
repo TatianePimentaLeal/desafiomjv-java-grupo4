@@ -16,7 +16,8 @@ public class CarrentalApp {
 
 	public static void main(String[] args) {
 		ClienteRepository repository = new ClienteRepository();
-		Cliente Joana = new Cliente("Joana", "Joana@gmail.com", "123456", "Rua:ABS, 123","12/12/1222", "00000000000");
+		Date data = new Date(1222, 12, 12);
+		Cliente Joana = new Cliente("Joana", "Joana@gmail.com", "123456", "Rua:ABS, 123",data, "00000000000");
 		repository.cadastrarCliente(Joana);
 		
 		ProdutoRepository repositoryP = new ProdutoRepository();
@@ -29,8 +30,9 @@ public class CarrentalApp {
 		
 		
 		ClienteService service = new ClienteService();
-		
-		Joana.setDataNascimento(service.formatarData(Joana.getDataNascimento()));
+
+		Date data2 = new Date(2000, 10, 10);
+		Joana.setDataNascimento(data2);
 		
 		Joana.setCpf(service.formatarCPF(Joana.getCpf()));		
 		
@@ -45,9 +47,7 @@ public class CarrentalApp {
 		Date a = Date.valueOf(LocalDate.now());
 		
 		Pedido pedido = new Pedido(1, a , 5, Joana, Carro);
-		System.out.println(pedido);
-		
-		
+		System.out.println(pedido);	
 	}
 	
 	
