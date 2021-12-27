@@ -60,12 +60,11 @@ public class CarrentalApp {
 		double valorCarro = 130000.0;
 		Locale localBR = new Locale("pt","BR");
 		NumberFormat moedaBR = NumberFormat.getCurrencyInstance(localBR);
+		moedaBR.setMinimumFractionDigits(2);
+		moedaBR.setMaximumFractionDigits(2);
 		System.out.println(moedaBR.format(valorCarro));
+	
 		
-		NumberFormat formatoBR = NumberFormat.getNumberInstance(localBR);
-		formatoBR.setMinimumFractionDigits(2);
-		formatoBR.setMaximumFractionDigits(2);
-		System.out.println(formatoBR.format(valorCarro));
 	}
 	
 	
