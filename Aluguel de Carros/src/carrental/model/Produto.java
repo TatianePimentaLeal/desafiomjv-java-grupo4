@@ -53,7 +53,7 @@ public class Produto {
 	@Override
 	public String toString() {
 		return String.format("Produto [nomeVeiculo=" + nomeVeiculo + ", placa=" + placa + ", descricao=" + descricao
-				+ ", valorAluguel=" + "%.2f" +  "]", valorAluguel);
+				+ ", valorAluguel=" + "%.2f" +  "]", valorAluguel, "valor do carro", valorCarro);
 	}
 	
 	

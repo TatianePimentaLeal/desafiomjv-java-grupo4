@@ -56,6 +56,7 @@ public class CarrentalApp {
 		Pedido pedido = new Pedido(1, d , 5, Joana, Carro);
 		System.out.println(pedido);	
 		
+<<<<<<< HEAD
 		//Eve
 		double aluguel = 120.0;
 		DecimalFormat valorDecimal = new DecimalFormat();
@@ -64,9 +65,21 @@ public class CarrentalApp {
 <<<<<<< HEAD
 		//Eve
 		double valorCarro = 1200.0;
+=======
+		//Usando esse formato, precisa confirar manualmente
+		double aluguel = 120.0;
+		DecimalFormat valorDecimal = new DecimalFormat("R$ ##.00");
+		System.out.println(valorDecimal.format(aluguel));
+		
+		//Usando esse formato, a configuração é feita automaticamente
+		double valorCarro = 130000.0;
+>>>>>>> d3acca1e2342e3f9bceb69488cdc06a399663a56
 		Locale localBR = new Locale("pt","BR");
 		NumberFormat moedaBR = NumberFormat.getCurrencyInstance(localBR);
+		moedaBR.setMinimumFractionDigits(2);
+		moedaBR.setMaximumFractionDigits(2);
 		System.out.println(moedaBR.format(valorCarro));
+<<<<<<< HEAD
 =======
 		//----Eve-------- 
 		double valorCarro = 130000.0;
@@ -78,6 +91,10 @@ public class CarrentalApp {
 		formatoBR.setMinimumFractionDigits(2);
 		formatoBR.setMaximumFractionDigits(2);
 		System.out.println(formatoBR.format(valorCarro));
+=======
+	
+		
+>>>>>>> d3acca1e2342e3f9bceb69488cdc06a399663a56
 	}
 	
 	
