@@ -22,7 +22,7 @@ public class CarrentalApp {
 		repository.cadastrarCliente(Joana);
 		
 		ProdutoRepository repositoryP = new ProdutoRepository();
-		Produto Carro = new Produto("Renault Sandeiro", "oqz1917", "Cinza chumbo", 50.00);
+		Produto Carro = new Produto("Renault Sandeiro", "oqz1917", "Cinza chumbo", 50.00, 12000);
 		repositoryP.criarProduto(Carro);
 		
 		Set<Cliente> clientes = repository.getClientes();
@@ -53,6 +53,7 @@ public class CarrentalApp {
 		double aluguel = 120.0;
 		DecimalFormat valorDecimal = new DecimalFormat("##.00");
 		System.out.println(valorDecimal.format(aluguel));
+		
 	}
 	
 	

@@ -5,13 +5,15 @@ public class Produto {
 	private String placa;
 	private String descricao;
 	private double valorAluguel;
+	private double valorCarro;
 	
-	public Produto(String nomeVeiculo, String placa, String descricao, double valorAluguel) {
+	public Produto(String nomeVeiculo, String placa, String descricao, double valorAluguel, double valorCarro) {
 		super();
 		this.nomeVeiculo = nomeVeiculo;
 		this.placa = placa;
 		this.descricao = descricao;
 		this.valorAluguel = valorAluguel;
+		this.valorCarro = valorCarro;
 	}
 	
 	public String getNomeVeiculo() {
@@ -35,8 +37,17 @@ public class Produto {
 	public double getValorAluguel() {
 		return valorAluguel;
 	}
+	
 	public void setValorAluguel(double valorAluguel) {
 		this.valorAluguel = valorAluguel;
+	}
+	
+	public double getValorCarro() {
+		return valorCarro;
+	}
+
+	public void setValorCarro(double valorCarro) {
+		this.valorCarro = valorCarro;
 	}
 
 	@Override
