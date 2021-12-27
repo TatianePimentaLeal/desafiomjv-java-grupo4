@@ -1,16 +1,13 @@
 package carrental;
 
 import java.sql.Date;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.time.LocalDate;
-import java.util.Locale;
 import java.util.Set;
-
 
 import carrental.model.Cliente;
 import carrental.model.Pedido;
 import carrental.model.Produto;
+import carrental.print.EscreverMetodos;
 import carrental.print.MetodoPrint;
 import carrental.repository.ClienteRepository;
 import carrental.repository.ProdutoRepository;
@@ -20,7 +17,7 @@ import carrental.service.ProdutoService;
 public class CarrentalApp {
 
 	public static void main(String[] args) {
-		ClienteRepository repository = new ClienteRepository(); 
+		ClienteRepository repository = new ClienteRepository();
 		
 		
 		
@@ -28,7 +25,7 @@ public class CarrentalApp {
 		repository.cadastrarCliente(Joana);
 		
 		ProdutoRepository repositoryP = new ProdutoRepository();
-		Produto Carro = new Produto("Renault Sandeiro", "oqz1917", "Cinza chumbo", 50.00, 2.55);
+		Produto Carro = new Produto("Renault Sandeiro", "oqz1917", "Cinza chumbo", 50.00);
 		repositoryP.criarProduto(Carro);
 		
 		
@@ -39,7 +36,12 @@ public class CarrentalApp {
 		ClienteService service = new ClienteService();
 
 		
-
+//		try {
+//			Joana.setDataNascimento(service.formatarData(Joana.getDataNascimento()));
+//		} catch (ParseException e) {
+//			
+//			e.printStackTrace();
+//		}
 		
 		Joana.setCpf(service.formatarCPF(Joana.getCpf()));		
 		
@@ -56,41 +58,17 @@ public class CarrentalApp {
 		Pedido pedido = new Pedido(1, d , 5, Joana, Carro);
 		System.out.println(pedido);	
 		
-		//Eve
-		double aluguel = 120.0;
-		DecimalFormat valorDecimal = new DecimalFormat();
-		System.out.println(valorDecimal.format(aluguel));
-		
-<<<<<<< HEAD
-		//Eve
-		double valorCarro = 1200.0;
-		Locale localBR = new Locale("pt","BR");
-		NumberFormat moedaBR = NumberFormat.getCurrencyInstance(localBR);
-		System.out.println(moedaBR.format(valorCarro));
-=======
-		//----Eve-------- 
-		double valorCarro = 130000.0;
-		Locale localBR = new Locale("pt","BR");
-		NumberFormat moedaBR = NumberFormat.getCurrencyInstance(localBR);
-		System.out.println(moedaBR.format(valorCarro));
-		
-		NumberFormat formatoBR = NumberFormat.getNumberInstance(localBR);
-		formatoBR.setMinimumFractionDigits(2);
-		formatoBR.setMaximumFractionDigits(2);
-		System.out.println(formatoBR.format(valorCarro));
+		MetodoPrint teste = new MetodoPrint();
+        teste.abrir();
+        teste.escrever();
+        teste.fechar();
+     
 	}
 	
 	
 	
 	
->>>>>>> d8ba5d674fc7aeddb5dc3717846ca446b87fc8ee
 		
-		MetodoPrint teste = new MetodoPrint();
-        teste.abrir();
-        teste.escrever(clientes, produtos, pedido);
-        teste.fechar();
-     
-	}		
 		
 	
 
