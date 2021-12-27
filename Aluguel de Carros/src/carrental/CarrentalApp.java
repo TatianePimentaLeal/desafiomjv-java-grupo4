@@ -57,7 +57,7 @@ public class CarrentalApp {
 		System.out.println(valorDecimal.format(aluguel));
 		
 		//----Eve-------- 
-		double valorCarro = 1200.0;
+		double valorCarro = 1300.0;
 		Locale localBR = new Locale("pt","BR");
 		NumberFormat moedaBR = NumberFormat.getCurrencyInstance(localBR);
 		System.out.println(moedaBR.format(valorCarro));
