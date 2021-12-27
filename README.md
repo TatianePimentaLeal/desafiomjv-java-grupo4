@@ -159,6 +159,13 @@ Para criar o mesmo exemplo mostrado com NumberFormat, observe o código a seguir
       - ###,###.### = 123 456,789 fr_FR
 
  Veja mais sobre a documentação da Classe java (java.text.DecimalFormat) no próprio site da Oracle, pelo link:
-  https://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html
+  https://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html <br><br><br>
+  
+  
+  
+
+<img  align="center" alt="" src="https://i.imgur.com/OdPQoi5.png"/>
+</div><br/>
+  
   
 
