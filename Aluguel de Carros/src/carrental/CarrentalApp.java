@@ -51,12 +51,12 @@ public class CarrentalApp {
 		Pedido pedido = new Pedido(1, a , 5, Joana, Carro);
 		System.out.println(pedido);	
 		
-		//----EVE------
+		//Usando esse formato, precisa confirar manualmente
 		double aluguel = 120.0;
-		DecimalFormat valorDecimal = new DecimalFormat("##.00");
+		DecimalFormat valorDecimal = new DecimalFormat("R$ ##.00");
 		System.out.println(valorDecimal.format(aluguel));
 		
-		//----Eve-------- 
+		//Usando esse formato, a configuração é feita automaticamente
 		double valorCarro = 130000.0;
 		Locale localBR = new Locale("pt","BR");
 		NumberFormat moedaBR = NumberFormat.getCurrencyInstance(localBR);
