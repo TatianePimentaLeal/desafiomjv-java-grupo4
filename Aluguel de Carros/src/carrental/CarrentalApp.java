@@ -24,7 +24,7 @@ public class CarrentalApp {
 		repository.cadastrarCliente(Joana);
 		
 		ProdutoRepository repositoryP = new ProdutoRepository();
-		Produto carro = new Produto("Renault Sandeiro", "oqz1917", "Cinza chumbo", 10, 50.00, 2.55);
+		Produto carro = new Produto("Renault Sandeiro", "oqz1917", "Cinza chumbo", 10, 50.00, 0.00);
 		repositoryP.criarProduto(carro);
 		
 		

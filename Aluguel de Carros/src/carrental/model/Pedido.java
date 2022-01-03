@@ -79,10 +79,11 @@ public class Pedido {
 		SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
 		return "Pedido Nº: " + numeroPedido 
 				+ "\nData do Pedido:  " + formatarData.format(dataPedido)
-				+ "\nQuantidade de Dias:" + qtdDias
-				+ "\nCliente:" + cliente 
-				+ "\nCarro:" + produto
-				+ "\nData Devolução:" + formatador.format(dataDevolucao);
+				+ "\nData Devolução:" + formatador.format(dataDevolucao)
+				+ "\n*********************************************************" 
+				+ "\n" + cliente + ":" 
+				+ "\n*********************************************************"
+				+ "\n" + produto + ":";
 	}
 
 
